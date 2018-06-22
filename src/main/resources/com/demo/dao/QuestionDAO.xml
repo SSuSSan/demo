@@ -7,7 +7,12 @@
     </sql>
     <select id="selectLatestQuestions" resultType="com.demo.model.Question">
         SELECT
-        <include refid="selectFields"/>
+        id                  as "id",
+        title               as "title",
+        content             as "content",
+        comment_count       as "commentCount",
+        created_date        as "createdDate",
+        user_id             as "userId"
         FROM
         <include refid="table"/>
         <if test="userId != 0">
