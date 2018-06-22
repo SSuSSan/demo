@@ -19,7 +19,7 @@ import java.util.Random;
 public class InitDatabaseTests {
 
     @Autowired
-    QuestionDAO questionDAO;
+    QuestionDAO questionDAO;//可以直接用，跟service一样？？？？
 
     @Autowired
     UserDAO userDAO;
@@ -35,15 +35,15 @@ public class InitDatabaseTests {
             user.setPassword("newpassword");
             user.setSalt("");
             userDAO.addUser(user);
-            Question question = new Question();//不初始化的那个？？？
-            question.setCommentCount(i);;
-            question.setTitle(String.format("TITLE%d", i));
-            question.setUserId(i + 1);
-            question.setContent(String.format("balabalabala%d", i));
-            Date date = new Date();
-            date.setTime(date.getTime() + i*1000);
-            question.setCreatedDate(date);
-            questionDAO.addQuestion(question);
+            //Question question = new Question();//不初始化的那个？？？
+            //question.setCommentCount(i);;
+            //question.setTitle(String.format("TITLE%d", i));
+            //question.setUserId(i + 1);
+            //question.setContent(String.format("balabalabala%d", i));
+            //Date date = new Date();
+            //date.setTime(date.getTime() + i*1000);
+            //question.setCreatedDate(date);
+            //questionDAO.addQuestion(question);
         }
         //System.out.print(questionDAO.selectLatestQuestions(0,0,10));
         //System.out.print(String.format("111111111111111111111111111%s",userDAO.selectById(1)));
