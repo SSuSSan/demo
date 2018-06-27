@@ -5,7 +5,7 @@ import com.demo.model.User;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-@Service//依赖注入
+@Service
 public class UserService {
     @Autowired
     UserDAO userDAO;
